@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using System.Data;
 using Microsoft.AspNetCore.Mvc;
 using cw5_6.Models;
+using System.Data.SqlClient;
 
 namespace cw5_6.Controllers
 {
@@ -19,6 +20,12 @@ namespace cw5_6.Controllers
          * HttpPatch,-> Załataj (częsciowa aktualizacja)
          * HttpDelete -> Usuń zasób
          */
+
+        [HttpGet]
+        public List<Student> GetStudents()
+        {
+            return SelectAllStudents();
+        }
 
         [HttpGet]
         public string GetStudents([FromQuery] string orderBy)
@@ -59,6 +66,30 @@ namespace cw5_6.Controllers
         public IActionResult DeleteStudent(int id)
         {
             return Ok("Usuwanie ukończone");
+        }
+
+        public List<Student> SelectAllStudents()
+        {
+            using (var con = new SqlConnection("Data Source=db-mssql;Initial Catalog=s15157;Integrated Security=True"))
+            using (var com = new SqlCommand())
+            {
+                com.Connection = con;
+                com.CommandText = "SELECT * FROM Students";
+                con.Open();
+                var dr = com.ExecuteReader();
+                List<Student> students = new List<Student>();
+                while (dr.Read())
+                {
+                    var st = new Student();
+                    st.IndexNumber = dr.GetString(dr.GetOrdinal("IndexNumber"));
+                    st.FirstName = dr.GetString(dr.GetOrdinal("FirstName"));
+                    st.LastName = dr.GetString(dr.GetOrdinal("LastName"));
+                    st.BirthDate = dr.GetDateTime(dr.GetOrdinal("BirthDate"));
+                    st.Studies = dr.GetString(dr.GetOrdinal("Studies"));
+                    students.Add(st);
+                }
+                return students;
+            }
         }
     }
 }
