@@ -8,6 +8,7 @@ using cw5_6.Models;
 using cw5_6.DTOs.Requests;
 using cw5_6.DTOs.Responses;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace cw5_6.Controllers
 {
@@ -46,9 +47,9 @@ namespace cw5_6.Controllers
                     var dr = com.ExecuteReader();
                     if (!dr.Read())
                     {
-                        
+
                         return BadRequest("Studia nie istnieja");
-                        
+
                     }
 
                     int idstudy = (int)dr["IdStudy"];
@@ -59,7 +60,7 @@ namespace cw5_6.Controllers
                     int exist = (int)com.ExecuteScalar();
                     int idEnrollment;
                     if (exist > 0)
-                    {  
+                    {
                         com.CommandText = "select IdEnrollment from Enrollment where IdStudy=@IdStudy AND Semester = 1";
                         dr = com.ExecuteReader();
                         if (dr.Read())
@@ -84,7 +85,6 @@ namespace cw5_6.Controllers
 
 
                     //x. Dodanie studenta
-                    //TU GDZIEŚ JEST BŁĄD I WYWALA CATCH
                     com.CommandText = "select COUNT(*) from Student where IndexNumber=@IndexNumber";
                     com.Parameters.AddWithValue("IndexNumber", request.IndexNumber);
                     int uniqueIndex = (int)com.ExecuteScalar();
@@ -110,7 +110,6 @@ namespace cw5_6.Controllers
                 }
                 catch (SqlException exc)
                 {
-                    return Ok("ROLLBACK");
                     tran.Rollback();
                 }
             }
@@ -126,5 +125,79 @@ namespace cw5_6.Controllers
 
             return Ok(response);
         }
+
+        [HttpPost("promotions")]
+        public IActionResult Promotions(EnrollPromotionsRequest request)
+        {
+            if (!ModelState.IsValid)
+            {
+                var d = ModelState;
+                return BadRequest("!!!");
+            }
+
+            var enroll = new Enrollment();
+
+            using (var con = new SqlConnection("Data Source=db-mssql;Initial Catalog=s15157;Integrated Security=True"))
+            using (var com = new SqlCommand())
+            {
+                com.Connection = con;
+                con.Open();
+                var tran = con.BeginTransaction();
+                com.Transaction = tran;
+                try
+                {
+                    com.CommandText = "SELECT IdStudy FROM Studies WHERE name=@name";
+                    com.Parameters.AddWithValue("name", request.Studies);
+                    var IdStudy = (int)com.ExecuteScalar();
+
+                    com.CommandText = "select IdEnrollment FROM Enrollment WHERE IdStudy=@IdStudy AND Semester=@Semester";
+                    com.Parameters.AddWithValue("Semester", (int)request.Semester);
+                    com.Parameters.AddWithValue("IdStudy", IdStudy);
+
+                    var dr = com.ExecuteReader();
+                    if (!dr.Read())
+                    {
+
+                        return BadRequest("Wpis w tabeli Enrollment nie istnieje");
+
+                    }
+
+                    dr.Close();
+                    SqlCommand cmd = new SqlCommand("dbo.PromoteStudents", con);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Studies", request.Studies);
+                    cmd.Parameters.AddWithValue("@Semester", request.Semester);
+                    cmd.Transaction = tran;
+                    cmd.ExecuteNonQuery();
+
+                    dr.Close();
+                    com.CommandText = "SELECT IdEnrollment FROM Enrollment WHERE IdStudy=@IdStudy AND Semester=@Semester";
+                    enroll.IdEnrollment=(int)com.ExecuteScalar();
+                    enroll.IdStudy = IdStudy;
+                    enroll.Semester = (int)request.Semester+1;
+
+                    com.CommandText = "SELECT StartDate FROM Enrollment WHERE IdStudy=@IdStudy AND Semester=@Semester";
+                    dr.Close();
+                    dr = com.ExecuteReader();
+                    if (dr.Read())
+                    {
+                        enroll.StartDate = dr.GetDateTime(dr.GetOrdinal("StartDate"));
+                    }
+
+
+
+                    dr.Close();
+                    tran.Commit();
+                }
+                catch(SqlException exc)
+                {
+                    tran.Rollback();
+                }
+
+            }
+                return Ok(enroll);
+
+        }
+
     }
 }
