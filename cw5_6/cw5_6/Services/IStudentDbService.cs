@@ -1,4 +1,5 @@
 ﻿using cw5_6.DTOs.Requests;
+using cw5_6.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,6 @@ namespace cw5_6.Services
     {
         void EnrollStudent(EnrollStudentRequest request);
         void PromoteStudents(int semester, string studies);
+        Student GetStudent(string IndexNumber);
     }
 }

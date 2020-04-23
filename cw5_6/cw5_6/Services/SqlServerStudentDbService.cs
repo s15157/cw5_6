@@ -10,9 +10,55 @@ namespace cw5_6.Services
 {
     public class SqlServerStudentDbService : IStudentDbService
     {
+
+        public Student GetStudent(string IndexNumber)
+        {
+            using (var con = new SqlConnection("Data Source=db-mssql;Initial Catalog=s15157;Integrated Security=True"))
+            using (var com = new SqlCommand())
+            {
+                com.Connection = con;
+                con.Open();
+                var tran = con.BeginTransaction();
+                com.Transaction = tran;
+
+                com.CommandText = "SELECT * FROM Student WHERE IndexNumber=@IndexNumber";
+                com.Parameters.AddWithValue("IndexNumber", IndexNumber);
+                var dr = com.ExecuteReader();
+                var st = new Student();
+                if (dr.Read())
+                {
+                        st.IndexNumber = dr.GetString(dr.GetOrdinal("IndexNumber"));
+                        st.FirstName = dr.GetString(dr.GetOrdinal("FirstName"));
+                        st.LastName = dr.GetString(dr.GetOrdinal("LastName")); 
+                        st.BirthDate = dr.GetDateTime(dr.GetOrdinal("BirthDate"));
+
+                    com.CommandText = "SELECT IdStudy FROM Enrollment WHERE IdEnrollment=@IdEnrollment";
+                    com.Parameters.AddWithValue("IdEnrollment", dr.GetInt32(dr.GetOrdinal("IdEnrollment")));
+                    dr.Close();
+                    var IdStudy = (int)com.ExecuteScalar();
+
+                    com.CommandText = "SELECT Name FROM Studies WHERE IdStudy=@IdStudy";
+                    com.Parameters.AddWithValue("IdStudy", IdStudy);
+                    dr.Close();
+                    dr = com.ExecuteReader();
+
+                    if (dr.Read())
+                    {
+                        st.Studies = dr.GetString(dr.GetOrdinal("Name"));
+                    }
+
+                    return st;
+
+                }
+
+
+            }
+            return null;
+        }
+
         public void EnrollStudent(EnrollStudentRequest request)
         {
-           
+
 
             var st = new Student();
             st.IndexNumber = request.IndexNumber;

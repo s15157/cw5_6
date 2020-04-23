@@ -1,0 +1,15 @@
+GET
+/api/enrollments
+
+
+GET
+/favicon.ico
+
+
+GET
+/api/enrollments
+{
+	"Studies": "IT",
+	"Semester": 4
+}
+?LastName=%22Kowalski%22
