@@ -10,6 +10,7 @@ using cw5_6.DTOs.Responses;
 using System.Data.SqlClient;
 using System.Data;
 using cw5_6.Services;
+using Microsoft.AspNetCore.Authorization;
 
 namespace cw5_6.Controllers
 {
@@ -25,6 +26,7 @@ namespace cw5_6.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "employee")]
         public IActionResult EnrollStudent(EnrollStudentRequest request)
         {
             //if (!ModelState.IsValid)
@@ -138,6 +140,7 @@ namespace cw5_6.Controllers
         }
 
         [HttpPost("promotions")]
+        [Authorize(Roles = "employee")]
         public IActionResult Promotions(EnrollPromotionsRequest request)
         {
             if (!ModelState.IsValid)

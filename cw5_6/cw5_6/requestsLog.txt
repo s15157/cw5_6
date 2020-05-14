@@ -13,3 +13,932 @@ GET
 	"Semester": 4
 }
 ?LastName=%22Kowalski%22
+GET
+/api/enrollments
+
+
+GET
+/favicon.ico
+
+
+GET
+/api/enrollments
+{
+	"Studies": "IT",
+	"Semester": 4
+}
+
+GET
+/api/students
+{
+	"Studies": "IT",
+	"Semester": 4
+}
+
+GET
+/api/
+
+
+GET
+/favicon.ico
+
+
+GET
+/api/s
+
+
+GET
+/api/st
+
+
+GET
+/api/stu
+
+
+GET
+/api/stud
+
+
+GET
+/api/stude
+
+
+GET
+/api/studen
+
+
+GET
+/api/student
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/favicon.ico
+
+
+GET
+/api/students
+
+
+GET
+/favicon.ico
+
+
+GET
+/api/students
+
+
+GET
+/favicon.ico
+
+
+GET
+/api/students
+
+
+GET
+/favicon.ico
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+{
+	"Studies": "IT",
+	"Semester": 4
+}
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/favicon.ico
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+{
+	"Studies": "IT",
+	"Semester": 4
+}
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/favicon.ico
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+{
+	"Studies": "IT",
+	"Semester": 4
+}
+
+GET
+/api/students
+
+
+GET
+/api/students
+{
+	"Studies": "IT",
+	"Semester": 4
+}
+
+GET
+/api/students
+{
+	"Studies": "IT",
+	"Semester": 4
+}
+
+GET
+/api/students
+{
+	"Studies": "IT",
+	"Semester": 4
+}
+
+GET
+/api/students
+
+
+GET
+/api/students
+{
+	"Studies": "IT",
+	"Semester": 4
+}
+
+GET
+/api/students
+{
+	"Studies": "IT",
+	"Semester": 4
+}
+
+GET
+/api/students
+{
+	"Studies": "IT",
+	"Semester": 4
+}
+
+GET
+/api/students
+{
+	"Studies": "IT",
+	"Semester": 4
+}
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+{
+	"Studies": "IT",
+	"Semester": 4
+}
+
+GET
+/api/students
+{
+	"Studies": "IT",
+	"Semester": 4
+}
+
+GET
+/api/students
+{
+	"Studies": "IT",
+	"Semester": 4
+}
+
+GET
+/api/students
+{
+	"Studies": "IT",
+	"Semester": 4
+}
+
+GET
+/api/students
+
+
+GET
+/api/students
+{
+	"Studies": "IT",
+	"Semester": 4
+}
+
+GET
+/api/students
+{
+	"Studies": "IT",
+	"Semester": 4
+}
+
+GET
+/api/students
+{
+	"Studies": "IT",
+	"Semester": 4
+}
+
+GET
+/api/students
+{
+	"Studies": "IT",
+	"Semester": 4
+}
+
+GET
+/api/students
+{
+	"Studies": "IT",
+	"Semester": 4
+}
+
+GET
+/api/students
+{
+	"Studies": "IT",
+	"Semester": 4
+}
+
+GET
+/api/students
+
+
+GET
+/api/students
+{
+	"Studies": "IT",
+	"Semester": 4
+}
+
+GET
+/api/students
+{
+	"Studies": "IT",
+	"Semester": 4
+}
+
+GET
+/api/students
+
+
+GET
+/api/students
+{
+	"Studies": "IT",
+	"Semester": 4
+}
+
+GET
+/api/students
+{
+	"Studies": "IT",
+	"Semester": 4
+}
+
+GET
+/api/students
+
+
+POST
+/api/students
+{
+	"login": "aaa",
+	"password": "asd"
+}
+
+POST
+/api/students
+{
+	"login": "aaa",
+	"password": "asd"
+}
+
+POST
+/api/students
+{
+	"login": "aaa",
+	"password": "asd"
+}
+
+GET
+/api/students
+{
+	"login": "aaa",
+	"password": "asd"
+}
+
+GET
+/api/students
+{
+	"login": "aaa",
+	"password": "asd"
+}
+
+GET
+/api/students
+
+
+GET
+/api/students
+{
+	"login": "aaa",
+	"password": "asd"
+}
+
+POST
+/api/students
+{
+	"login": "aaa",
+	"password": "asd"
+}
+
+GET
+/api/students
+{
+	"login": "aaa",
+	"password": "asd"
+}
+
+POST
+/api/students
+{
+	"login": "aaa",
+	"password": "asd"
+}
+
+GET
+/api/students
+
+
+POST
+/api/students
+{
+	"login": "aaa",
+	"password": "asd"
+}
+
+POST
+/api/students
+{
+	"login": "s15157",
+	"password": "asd"
+}
+
+GET
+/api/students
+
+
+POST
+/api/students
+{
+	"login": "s15157",
+	"password": "asd"
+}
+
+POST
+/api/students
+{
+	"login": "s151578",
+	"password": "asd"
+}
+
+POST
+/api/students
+{
+	"login": "s15157",
+	"password": "asd"
+}
+
+GET
+/api/students
+
+
+POST
+/api/students
+{
+	"login": "s15157",
+	"password": "asd"
+}
+
+POST
+/api/students
+{
+	"login": "s15157",
+	"password": "asd"
+}
+
+POST
+/api/students
+{
+	"login": "s15157",
+	"password": "asd"
+}
+
+POST
+/api/students
+{
+	"login": "s23234",
+	"password": "asd"
+}
+
+POST
+/api/students
+{
+	"login": "s23234",
+	"password": "asd123"
+}
+
+POST
+/api/students
+{
+	"login": "s23234",
+	"password": "asd1232"
+}
+
+POST
+/api/students
+{
+	"login": "s23234",
+	"password": "asd1232"
+}
+
+GET
+/api/students
+
+
+POST
+/api/students
+{
+	"login": "s23234",
+	"password": "asd1232"
+}
+
+POST
+/api/students
+{
+	"login": "s23234",
+	"password": "asd123"
+}
+
+GET
+/api/students
+
+
+POST
+/api/students
+{
+	"login": "s23234",
+	"password": "asd1223"
+}
+
+POST
+/api/students
+{
+	"login": "s23234",
+	"password": "asd1223"
+}
+
+GET
+/api/students
+
+
+POST
+/api/students
+{
+	"login": "s23234",
+	"password": "asd1223"
+}
+
+POST
+/api/students
+{
+	"login": "s23234",
+	"password": "asd123"
+}
+
+POST
+/api/students
+{
+	"login": "s23234",
+	"password": "asd123"
+}
+
+POST
+/api/students
+{
+	"login": "s23234",
+	"password": "asd123"
+}
+
+GET
+/api/students
+
+
+POST
+/api/students
+{
+	"login": "s23234",
+	"password": "asd123"
+}
+
+POST
+/api/students
+{
+	"login": "s23234",
+	"password": "asd123"
+}
+
+POST
+/api/students
+{
+	"login": "s23234",
+	"password": "asd123"
+}
+
+POST
+/api/students
+{
+	"login": "s23234",
+	"password": "asd123"
+}
+
+POST
+/api/students
+{
+	"login": "s23234",
+	"password": "asd123"
+}
+
+POST
+/api/students
+{
+	"login": "s23234",
+	"password": "asd123"
+}
+
+GET
+/api/students
+
+
+POST
+/api/students
+{
+	"login": "s23234",
+	"password": "asd123"
+}
+
+POST
+/api/students
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+POST
+/api/students
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+GET
+/api/students
+
+
+POST
+/api/students
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+POST
+/api/students
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+POST
+/api/students
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+POST
+/api/students
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+POST
+/api/students
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+POST
+/api/students
+{
+	"login": "s15157",
+	"password": "naj1223"
+}
+
+POST
+/api/students
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
