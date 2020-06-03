@@ -11,6 +11,6 @@ namespace cw5_6.Services
     {
         void EnrollStudent(EnrollStudentRequest request);
         void PromoteStudents(int semester, string studies);
-        Student GetStudent(string IndexNumber);
+        Student1 GetStudent(string IndexNumber);
     }
 }

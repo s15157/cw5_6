@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using cw5_6.Handlers;
 using cw5_6.Middleware;
+using cw5_6.Models;
 using cw5_6.Services;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -12,11 +13,13 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
 
 namespace cw5_6
 {
@@ -53,8 +56,15 @@ namespace cw5_6
 
             services.AddScoped<IStudentDbService, SqlServerStudentDbService>();
             services.AddTransient<IStudentDbService, SqlServerStudentDbService>();
-            services.AddControllers()
-                    .AddXmlSerializerFormatters();
+            //services.AddControllers()
+            //        .AddXmlSerializerFormatters();
+
+            services.AddDbContext<s15157Context>(options => options.UseSqlServer("Data Source =db-mssql; Initial Catalog = s15157; Integrated Security = True"));
+
+            services.AddControllers().AddNewtonsoftJson(options =>
+            {
+                options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+            });
 
 
         }

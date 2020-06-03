@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace cw5_6.Models
 {
-    public partial class Student
+    public class StudentViewModel
     {
         public string IndexNumber { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime BirthDate { get; set; }
         public int IdEnrollment { get; set; }
-        public string Password { get; set; }
-        public string Salt { get; set; }
-        public string RefToken { get; set; }
-
-        public virtual Enrollment IdEnrollmentNavigation { get; set; }
+       
     }
 }

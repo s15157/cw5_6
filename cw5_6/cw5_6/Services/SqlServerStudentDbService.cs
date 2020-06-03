@@ -11,7 +11,7 @@ namespace cw5_6.Services
     public class SqlServerStudentDbService : IStudentDbService
     {
 
-        public Student GetStudent(string IndexNumber)
+        public Student1 GetStudent(string IndexNumber)
         {
             using (var con = new SqlConnection("Data Source=db-mssql;Initial Catalog=s15157;Integrated Security=True"))
             using (var com = new SqlCommand())
@@ -24,7 +24,7 @@ namespace cw5_6.Services
                 com.CommandText = "SELECT * FROM Student WHERE IndexNumber=@IndexNumber";
                 com.Parameters.AddWithValue("IndexNumber", IndexNumber);
                 var dr = com.ExecuteReader();
-                var st = new Student();
+                var st = new Student1();
                 if (dr.Read())
                 {
                         st.IndexNumber = dr.GetString(dr.GetOrdinal("IndexNumber"));
@@ -60,7 +60,7 @@ namespace cw5_6.Services
         {
 
 
-            var st = new Student();
+            var st = new Student1();
             st.IndexNumber = request.IndexNumber;
             st.FirstName = request.FirstName;
             st.LastName = request.LastName;

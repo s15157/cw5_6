@@ -942,3 +942,279 @@ POST
 	"password": "naj123"
 }
 
+GET
+/api/students
+
+
+POST
+/api/students
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+GET
+/api/students
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+GET
+/api/students
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+GET
+/api/students
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+POST
+/api/students
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+GET
+/api/students
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+GET
+/api/students
+
+
+GET
+/api/students
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+POST
+/api/students
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+POST
+/api/students
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+GET
+/api/students
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+GET
+/api/students
+
+
+GET
+/api/students
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+GET
+/api/students
+
+
+GET
+/api/students1
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+GET
+/api/students1
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+GET
+/api/students
+
+
+POST
+/api/students
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+POST
+/api/students
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+GET
+/api/students
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+GET
+/api/students
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+GET
+/api/students1
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+POST
+/api/students1
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+POST
+/api/students
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+GET
+/api/students
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+GET
+/api/students1
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students1
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+GET
+/api/students1
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+GET
+/api/students
+
+
+GET
+/api/students1
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+GET
+/api/students
+
+
+GET
+/api/students
+
+
+GET
+/api/students1
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+GET
+/api/students
+
+
+POST
+/api/enrollments/promotions
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+?id=s15157
+POST
+/api/enrollments
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+POST
+/api/students
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+
+POST
+/api/enrollments/promotions
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+?id=s15157
+POST
+/api/enrollments
+{
+	"login": "s15157",
+	"password": "naj123"
+}
+?id=s15157
+POST
+/api/enrollments
+{
+	"login": "s15157",
+	"password": "naj123",
+	"Studies": "SNM",
+	"LastName": "Nowak",
+	"FirstName" : "Damian",
+	"IndexNumber" : "s23234"
+}
+?id=s15157

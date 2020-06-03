@@ -39,14 +39,14 @@ namespace cw5_6.Controllers
 
         [HttpGet]
         [Authorize]
-        public List<Student> GetStudents()
+        public List<Student1> GetStudents()
         {
             return SelectAllStudents();
         }
 
 
         [HttpPost("{addStudent}")]
-        public IActionResult AddStudent(Student student)
+        public IActionResult AddStudent(Student1 student)
         {
             using (var con = new SqlConnection("Data Source=db-mssql;Initial Catalog=s15157;Integrated Security=True"))
             using (var com = new SqlCommand())
@@ -96,7 +96,7 @@ namespace cw5_6.Controllers
 
                 if (dr.Read())
                 {
-                    var st = new Student();
+                    var st = new Student1();
 
                     st.IndexNumber = dr.GetString(dr.GetOrdinal("IndexNumber"));
                     st.FirstName = dr.GetString(dr.GetOrdinal("FirstName"));
@@ -138,7 +138,7 @@ namespace cw5_6.Controllers
             using (var com = new SqlCommand())
             {
                 com.Connection = con;
-                com.CommandText = "DELTE FROM Student Where IndexNumber=@id";
+                com.CommandText = "DELETE FROM Student Where IndexNumber=@id";
                 com.Parameters.AddWithValue("id", id);
                 con.Open();
 
@@ -147,7 +147,7 @@ namespace cw5_6.Controllers
                 return Ok("Usuwanie ukończone");
         }
 
-        public List<Student> SelectAllStudents()
+        public List<Student1> SelectAllStudents()
         {
             using (var con = new SqlConnection("Data Source=db-mssql;Initial Catalog=s15157;Integrated Security=True"))
             using (var com = new SqlCommand())
@@ -157,12 +157,12 @@ namespace cw5_6.Controllers
                 con.Open();
                 var dr = com.ExecuteReader();
 
-                List<Student> students = new List<Student>();
+                List<Student1> students = new List<Student1>();
                 if (dr.HasRows)
                 {
                     while (dr.Read())
                     {
-                            var st = new Student();
+                            var st = new Student1();
 
                             st.IndexNumber = Convert.ToString(dr["IndexNumber"]);
                             st.FirstName = Convert.ToString(dr["FirstName"]);
